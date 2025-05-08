@@ -11,22 +11,23 @@
 ## 🚀 Быстрый старт
 
 # Клонируем репозиторий
-git clone https://github.com/vevsksenon/collector_redis.git
-cd collector_redis
+`git clone https://github.com/vevsksenon/collector_redis.git`
+
+`cd collector_redis`
 
 # Устанавливаем зависимости
 npm install
 
 # Запускаем Redis через Docker или Brew (если он не установлен локально)
-docker run -d --name redis -p 6379:6379 redis
-- или ставим через Brew
-brew install redis
-и запускаем
-brew services start redis
+- docker run -d --name redis -p 6379:6379 redis
+- или ставим через Brew  
+`brew install redis`  
+и запускаем  
+`brew services start redis`
 
 # Проверяем Redis
-redis-cli ping
-# Должен вернуть: PONG
+redis-cli ping  
+Должен вернуть: PONG
 
 # Компилируем проект
 npx tsc
@@ -36,6 +37,6 @@ node dist/index.js
 
 ## Конфигурация 
 
-const NUM_PRODUCERS = 3; // Кол-во производителей
-const MIN = 1;           // Минимальное значение диапазона
-const MAX = 500;         // Максимальное значение диапазона
+const NUM_PRODUCERS = 3;  Кол-во производителей  
+const MIN = 1;            Минимальное значение диапазона  
+const MAX = 500;          Максимальное значение диапазона
