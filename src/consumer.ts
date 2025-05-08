@@ -55,7 +55,6 @@ async function consume(): Promise<void> {
 
   const result = { timeSpent, numbersGenerated };
 
-  // ... где-то в consumer.ts после получения результата:
   const fileName = getAvailableFilename('result', 'json');
   fs.writeFileSync(path.resolve(__dirname, fileName), JSON.stringify(result, null, 2));
   console.log(`✅ Все числа найдены. Результат записан в result.json`);
