@@ -29,6 +29,8 @@ function getAvailableFilename(baseName: string, ext: string): string {
   return filename;
 }
 
+console.log(`Ищем числа в диапозоне от ${min} до ${max}`);
+
 async function consume(): Promise<void> {
   let lastId = '0';
 

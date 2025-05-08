@@ -9,6 +9,9 @@ function getRandomInt(min: number, max: number): number {
 }
 
 async function produce(): Promise<void> {
+  await redis.del('number_stream');
+  console.log('🔄 Очередь number_stream очищена');
+
   while (true) {
     const num = getRandomInt(min, max);
     await redis.xadd('number_stream', '*', 'value', num.toString());
